@@ -1,0 +1,129 @@
+.wfs-submissions-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 24px 0;
+    font-size: 16px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+.wfs-submissions-table thead.wfs-header {
+    display: table-header-group;
+    background-color: #f8fafc;
+}
+.wfs-submissions-table thead tr.wfs-header-row { display: table-row; }
+.wfs-submissions-table th {
+    padding: 16px;
+    text-align: left;
+    font-weight: 600;
+    color: #334155;
+    border-bottom: 2px solid #e2e8f0;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+.wfs-submissions-table tbody.wfs-body tr {
+    display: table-row;
+    transition: background-color 0.2s ease;
+}
+.wfs-submissions-table tbody.wfs-body tr:hover { background-color: #f1f5f9; }
+.wfs-submissions-table tbody.wfs-body td {
+    display: table-cell;
+    padding: 16px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #475569;
+    vertical-align: middle;
+}
+.wfs-submissions-table tbody.wfs-body tr:last-child td { border-bottom: none; }
+.wfs-submissions-table td:first-child {
+    /* ID */
+    font-weight: 600;
+    color: #334155;
+}
+.wfs-submissions-table td:nth-child(2) { color: #64748b; /* Date */ }
+
+/** Dialog Styling **/
+:root {
+    --tablet-modal-height: 80svh;
+    --tablet-modal-width: 90%;
+
+    --desktop-modal-height: 85svh;
+    --desktop-modal-width: 80%;
+}
+.wfs-form-dialog::backdrop { background-color: rgba(0, 0, 0, 0.6); }
+dialog.wfs-form-dialog {
+    z-index: 20;
+    width: var(--tablet-modal-width);
+    height: var(--tablet-modal-height);
+    margin-top: 25px;
+    margin-bottom: 25px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border: none;
+    border-radius: 8px;
+    max-width: 90%;
+    background-color: #fff;
+}
+dialog.wfs-form-dialog form { padding: 25px; }
+dialog.wfs-form-dialog form h2 { margin: 0; }
+dialog.wfs-form-dialog form header {
+    display: flex;
+    justify-content: space-between;
+}
+dialog.wfs-form-dialog form header button{
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+}
+dialog.wfs-form-dialog form header button:hover {
+    background-color: #4338ca;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+dialog.wfs-form-dialog form header button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+dialog.wfs-form-dialog form header button:focus {
+    outline: 2px solid #818cf8;
+    outline-offset: 2px;
+}
+button.wfs-button {
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+}
+button.wfs-button:hover {
+    background-color: #4338ca;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+button.wfs-button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+button.wfs-button:focus {
+    outline: 2px solid #818cf8;
+    outline-offset: 2px;
+}
+@media only screen and (min-width: 768px) {
+    /* Desktop styling */
+    dialog.wfs-form-dialog {
+        height: var(--desktop-modal-height);
+        width: var(--desktop-modal-width);
+    }
+}
